@@ -142,28 +142,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
-          <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl p-8 border border-pink-500/20">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold mb-2">Stay Connected</h3>
-              <p className="text-gray-300">
-                Subscribe to our newsletter for fertility tips, success stories, and treatment updates.
-              </p>
-            </div>
-            
-            <div className="max-w-md mx-auto flex gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500/50 focus:border-pink-500/50"
-              />
-              <button className="bg-gradient-to-r from-pink-500 to-purple-500 px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
+        // ...existing code...
       </div>
 
       {/* Bottom Bar */}

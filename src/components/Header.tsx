@@ -69,7 +69,7 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
               className="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors"
             >
               <Phone size={16} />
-      // ...existing code...
+              <span>+1 (234) 567-890</span>
             </a>
             <button
               onClick={() => scrollToSection('consultation')}

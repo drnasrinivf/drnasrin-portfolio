@@ -237,29 +237,7 @@ export default function Blog() {
           ))}
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-3xl p-8 md:p-12 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">Stay Updated with Latest Insights</h3>
-          <p className="text-pink-100 mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter and get expert fertility advice, treatment updates, 
-            and wellness tips delivered directly to your inbox.
-          </p>
-          
-          <div className="max-w-md mx-auto flex gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
-            />
-            <button className="bg-white text-pink-600 px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300">
-              Subscribe
-            </button>
-          </div>
-          
-          <p className="text-pink-200 text-xs mt-4">
-            Join 5,000+ people already receiving our expert insights and tips.
-          </p>
-        </div>
+        // ...existing code...
       </div>
     </div>
   );

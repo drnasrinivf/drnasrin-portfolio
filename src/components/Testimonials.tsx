@@ -110,9 +110,9 @@ export default function Testimonials() {
 
         {/* Overall Rating */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8 border border-pink-100">
-            <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+          <div className="flex flex-col sm:flex-row items-center sm:space-x-4 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-4 sm:p-8 border border-pink-100 w-full max-w-md mx-auto">
+            <div className="text-center w-full sm:w-auto mb-4 sm:mb-0">
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
                 4.9/5
               </div>
               <div className="flex justify-center space-x-1 mb-2">
@@ -120,21 +120,21 @@ export default function Testimonials() {
                   <Star key={i} className="w-5 h-5 fill-pink-500 text-pink-500" />
                 ))}
               </div>
-              <p className="text-gray-600">Overall Rating</p>
+              <p className="text-gray-600 text-xs sm:text-base">Overall Rating</p>
             </div>
-            <div className="w-px h-16 bg-pink-200"></div>
-            <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+            <div className="hidden sm:block w-px h-16 bg-pink-200"></div>
+            <div className="text-center w-full sm:w-auto mb-4 sm:mb-0">
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
                 500+
               </div>
-              <p className="text-gray-600">Patient Reviews</p>
+              <p className="text-gray-600 text-xs sm:text-base">Patient Reviews</p>
             </div>
-            <div className="w-px h-16 bg-pink-200"></div>
-            <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+            <div className="hidden sm:block w-px h-16 bg-pink-200"></div>
+            <div className="text-center w-full sm:w-auto">
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
                 50+
               </div>
-              <p className="text-gray-600">Countries</p>
+              <p className="text-gray-600 text-xs sm:text-base">Countries</p>
             </div>
           </div>
         </div>
