@@ -13,6 +13,7 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BlogPost from './components/BlogPost';
+import CaseStudyPost from './components/CaseStudyPost';
 
 function HomePage() {
   const [activeSection, setActiveSection] = useState('home');
@@ -92,6 +93,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/case-study/:id" element={<CaseStudyPost />} />
       </Routes>
     </Router>
   );
