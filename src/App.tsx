@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,14 +12,15 @@ import Blog from './components/Blog';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import BlogPost from './components/BlogPost';
 
-function App() {
+function HomePage() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'about', 'services', 'consultation', 'case-studies', 'testimonials', 'collaborations', 'blog', 'faq', 'contact'];
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -38,49 +40,60 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
-      
+
       <section id="home">
         <Hero />
       </section>
-      
+
       <section id="about">
         <About />
       </section>
-      
+
       <section id="services">
         <Services />
       </section>
-      
+
       <section id="consultation">
         <Consultation />
       </section>
-      
+
       <section id="case-studies">
         <CaseStudies />
       </section>
-      
+
       <section id="testimonials">
         <Testimonials />
       </section>
-      
+
       {/* <section id="collaborations">
         <Collaborations />
       </section> */}
-      
+
       <section id="blog">
         <Blog />
       </section>
-      
+
       <section id="faq">
         <FAQ />
       </section>
-      
+
       <section id="contact">
         <Contact />
       </section>
-      
+
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
+      </Routes>
+    </Router>
   );
 }
 

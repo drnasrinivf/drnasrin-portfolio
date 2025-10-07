@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowRight, BookOpen, Heart, Baby, Stethoscope, Tag } from 'lucide-react';
+import { blogPosts } from '../data/blogData';
 
 export default function Blog() {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -10,70 +13,6 @@ export default function Blog() {
     { id: 'treatments', name: 'Treatments', count: 6 },
     { id: 'wellness', name: 'Wellness', count: 5 },
     { id: 'international', name: 'International Care', count: 5 }
-  ];
-
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Understanding IVF: A Comprehensive Guide for International Patients",
-      excerpt: "Everything you need to know about IVF treatment, from preparation to success rates, with special considerations for international patients.",
-      category: "treatments",
-      readTime: "8 min read",
-      date: "March 15, 2024",
-      author: "Dr. Sarah Johnson",
-      image: "ivf-guide",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Fertility Nutrition: Foods That Support Your Journey to Parenthood",
-      excerpt: "Discover the science-backed nutritional strategies that can enhance fertility and support your reproductive health naturally.",
-      category: "wellness",
-      readTime: "6 min read",
-      date: "March 12, 2024",
-      author: "Dr. Sarah Johnson",
-      image: "nutrition"
-    },
-    {
-      id: 3,
-      title: "PCOS and Fertility: Managing Symptoms for Better Outcomes",
-      excerpt: "A comprehensive approach to understanding and managing PCOS to improve fertility outcomes and overall well-being.",
-      category: "fertility",
-      readTime: "7 min read",
-      date: "March 10, 2024",
-      author: "Dr. Sarah Johnson",
-      image: "pcos"
-    },
-    {
-      id: 4,
-      title: "International Fertility Treatment: What to Expect",
-      excerpt: "A guide for international patients considering fertility treatment abroad, including logistics, preparation, and what to expect.",
-      category: "international",
-      readTime: "10 min read",
-      date: "March 8, 2024",
-      author: "Dr. Sarah Johnson",
-      image: "international"
-    },
-    {
-      id: 5,
-      title: "Male Factor Infertility: Breaking the Silence",
-      excerpt: "Understanding male fertility issues, available treatments, and how couples can navigate this journey together.",
-      category: "fertility",
-      readTime: "5 min read",
-      date: "March 5, 2024",
-      author: "Dr. Sarah Johnson",
-      image: "male-fertility"
-    },
-    {
-      id: 6,
-      title: "Endometriosis and Fertility: Treatment Options That Work",
-      excerpt: "Exploring the latest treatment approaches for endometriosis and their impact on fertility outcomes.",
-      category: "treatments",
-      readTime: "9 min read",
-      date: "March 2, 2024",
-      author: "Dr. Sarah Johnson",
-      image: "endometriosis"
-    }
   ];
 
   const filteredPosts = selectedCategory === 'all' 
@@ -140,7 +79,10 @@ export default function Blog() {
                     </div>
                   </div>
                   
-                  <button className="flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                  <button
+                    onClick={() => navigate(`/blog/${featuredPost.id}`)}
+                    className="flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                  >
                     <BookOpen size={16} />
                     <span>Read Full Article</span>
                     <ArrowRight size={16} />
@@ -227,7 +169,10 @@ export default function Blog() {
                     <span>{post.date}</span>
                   </div>
                   
-                  <button className="flex items-center space-x-1 text-pink-600 hover:text-purple-600 text-sm font-medium transition-colors">
+                  <button
+                    onClick={() => navigate(`/blog/${post.id}`)}
+                    className="flex items-center space-x-1 text-pink-600 hover:text-purple-600 text-sm font-medium transition-colors"
+                  >
                     <span>Read More</span>
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -237,7 +182,6 @@ export default function Blog() {
           ))}
         </div>
 
-        // ...existing code...
       </div>
     </div>
   );
