@@ -42,8 +42,9 @@ export default function Hero() {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Award-winning fertility specialist with over 15 years of experience helping families worldwide. 
-                Offering personalized care, advanced treatments, and hope to patients from around the globe.
+               Award-Winning As a fertility Specialist with over 15 years of experience, 
+               I've had the privilege of assisting families all over the world in realising their dream of parenthood.
+
               </p>
             </div>
 

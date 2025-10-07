@@ -34,16 +34,16 @@ export default function About() {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">My Journey & Story</h3>
               <p className="text-gray-600 leading-relaxed">
-                With over 15 years of dedicated practice in reproductive medicine, I have had the privilege 
-                of helping thousands of families from around the world realize their dreams of parenthood. 
-                My journey began with a passion for women's health and has evolved into specializing in 
-                fertility treatments, IVF, and comprehensive gynecological care.
+                Hi, I’m Dr. Nasrin, a fertility specialist and Founder of Eva IVF & Women’s Centre in Chennai. 
+                With 15+ years of experience in reproductive medicine, IVF, ICSI, IUI, and fertility preservation, 
+                I have helped couples from India and abroad achieve their dream of parenthood. My training at Madras Medical College, 
+                along with advanced expertise in reproductive endocrinology, andrology, and minimal access surgery, ensures world-class care with compassion.
+
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Having completed my medical degree from Harvard Medical School and specialized training 
-                in reproductive endocrinology, I believe in combining evidence-based medicine with 
-                compassionate, personalized care. Each patient's journey is unique, and I am committed 
-                to providing the highest level of support throughout their fertility journey.
+                Becoming a doctor was my calling. Becoming an entrepreneur was my courage. But helping people become parents that’s my purpose. 
+                Eva IVF was built not just as a fertility clinic, but as a safe space for hope. Fertility care is more than science, it is emotional,
+                 personal, and deeply human. Every couple who walks through our doors carries a unique story, and those stories shape the way we care.
               </p>
             </div>
 
@@ -54,19 +54,19 @@ export default function About() {
                 <div className="flex items-start space-x-3">
                   <Heart className="text-pink-500 mt-1" size={16} />
                   <p className="text-gray-600 text-sm">
-                    <strong>Compassionate Care:</strong> Every patient deserves empathy, understanding, and personalized attention.
+                    <strong>Mission</strong> My mission is to help couples worldwide find hope and clarity in their fertility journey. Through advanced treatments like IVF, ICSI, IUI, and fertility preservation, I provide medical expertise with a personal touch. Every patient across the globe deserves care that balances science with compassion
                   </p>
                 </div>
-                <div className="flex items-start space-x-3">
+                {/* <div className="flex items-start space-x-3">
                   <Globe className="text-purple-500 mt-1" size={16} />
                   <p className="text-gray-600 text-sm">
                     <strong>Global Accessibility:</strong> Quality fertility care should be accessible to patients worldwide.
                   </p>
-                </div>
+                </div> */}
                 <div className="flex items-start space-x-3">
                   <Stethoscope className="text-pink-500 mt-1" size={16} />
                   <p className="text-gray-600 text-sm">
-                    <strong>Excellence in Treatment:</strong> Combining latest medical advances with proven methodologies.
+                    <strong>Vission</strong> My vision is to be recognised internationally as a trusted fertility specialist who combines reproductive medicine with empathy. I aim to make Eva IVF & Women’s Centre a global destination for families seeking IVF treatment, reproductive care, and supportive guidance turning the dream of parenthood into reality, no matter where the journey begins.
                   </p>
                 </div>
               </div>
@@ -83,20 +83,20 @@ export default function About() {
               </div>
               <div className="space-y-4">
                 <div className="border-l-4 border-pink-500 pl-4">
-                  <h4 className="font-semibold text-gray-900">Medical Education</h4>
-                  <p className="text-gray-600 text-sm">MD - Harvard Medical School, Boston</p>
-                  <p className="text-gray-500 text-sm">Summa Cum Laude, 2005</p>
+                  <h4 className="font-semibold text-gray-900">Madras Medical College (MMC)</h4>
+                  <p className="text-gray-600 text-sm">MS obstetrics and gynecology, Obstetrics and Gynecology Residency Program</p>
+                  <p className="text-gray-500 text-sm">2013 - 2016</p>
                 </div>
                 <div className="border-l-4 border-purple-500 pl-4">
-                  <h4 className="font-semibold text-gray-900">Specialization</h4>
-                  <p className="text-gray-600 text-sm">Fellowship in Reproductive Endocrinology</p>
-                  <p className="text-gray-500 text-sm">Johns Hopkins Hospital, 2008</p>
+                  <h4 className="font-semibold text-gray-900">Madras Medical College (MMC)</h4>
+                  <p className="text-gray-600 text-sm">Bachelor of Medicine, Bachelor of Surgery - MBBS, Medicine</p>
+                  <p className="text-gray-500 text-sm">2005 - 2010</p>
                 </div>
-                <div className="border-l-4 border-pink-500 pl-4">
+                {/* <div className="border-l-4 border-pink-500 pl-4">
                   <h4 className="font-semibold text-gray-900">Certifications</h4>
                   <p className="text-gray-600 text-sm">Board Certified - Obstetrics & Gynecology</p>
                   <p className="text-gray-500 text-sm">Fellow, Royal College of Obstetricians</p>
-                </div>
+                </div> */}
               </div>
             </div>
 
