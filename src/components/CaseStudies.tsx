@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Heart, Baby, Users, Star, ChevronLeft, ChevronRight, Award, Clock, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { caseStudiesData } from '../data/caseStudiesData';
 
 export default function CaseStudies() {
@@ -114,12 +115,12 @@ export default function CaseStudies() {
                     <p className="text-right text-pink-100 text-sm mt-3">— {currentCase.patientInfo}</p>
                   </div>
                   <div className="pt-6 text-right">
-                    <a
-                      href={`/case-study/${currentCase.id}`}
+                    <Link
+                      to={`/case-study/${currentCase.id}`}
                       className="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                     >
                       <span>Read More</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
