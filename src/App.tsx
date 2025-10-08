@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
-import Consultation from './components/Consultation';
+// Consultation component intentionally left in the project but not embedded in HomePage
 import CaseStudies from './components/CaseStudies';
 import Testimonials from './components/Testimonials';
 import Collaborations from './components/Collaborations';
@@ -13,13 +13,14 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BlogPost from './components/BlogPost';
+import CaseStudyDetail from './components/CaseStudyDetail';
 
 function HomePage() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'services', 'consultation', 'case-studies', 'testimonials', 'collaborations', 'blog', 'faq', 'contact'];
+  const sections = ['home', 'about', 'services', 'case-studies', 'testimonials', 'collaborations', 'blog', 'faq', 'contact'];
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -53,10 +54,6 @@ function HomePage() {
         <Services />
       </section>
 
-      <section id="consultation">
-        <Consultation />
-      </section>
-
       <section id="case-studies">
         <CaseStudies />
       </section>
@@ -65,9 +62,9 @@ function HomePage() {
         <Testimonials />
       </section>
 
-      {/* <section id="collaborations">
+      <section id="collaborations">
         <Collaborations />
-      </section> */}
+      </section> 
 
       <section id="blog">
         <Blog />
@@ -92,6 +89,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/case-study/:id" element={<CaseStudyDetail />} />
       </Routes>
     </Router>
   );

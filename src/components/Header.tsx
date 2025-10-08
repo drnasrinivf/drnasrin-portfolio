@@ -13,7 +13,7 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'services', label: 'Services' },
-    { id: 'consultation', label: 'Consultation' },
+    // { id: 'consultation', label: 'Consultation' },
     { id: 'case-studies', label: 'Case Studies' },
     { id: 'testimonials', label: 'Testimonials' },
     { id: 'collaborations', label: 'Speaking' },
@@ -64,13 +64,13 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <a
+            {/* <a
               href="tel:+1234567890"
               className="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors"
             >
               <Phone size={16} />
               <span>+1 (234) 567-890</span>
-            </a>
+            </a> */}
             <button
               onClick={() => scrollToSection('consultation')}
               className="flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
@@ -107,13 +107,13 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
                 </button>
               ))}
               <div className="pt-4 mt-4 border-t border-purple-100 space-y-3">
-                <a
+                {/* <a
                   href="tel:+1234567890"
                   className="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors px-4"
                 >
                   <Phone size={16} />
-      // ...existing code...
-                </a>
+                  <span>+1 (234) 567-890</span>
+                </a> */}
                 <button
                   onClick={() => scrollToSection('consultation')}
                   className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-3 rounded-lg hover:shadow-lg transition-all duration-200"

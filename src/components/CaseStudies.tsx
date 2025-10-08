@@ -13,7 +13,7 @@ export default function CaseStudies() {
       treatment: "Lifestyle counselling, structured diet with adequate protein and fibre, supervised strength training, husband’s break from night shifts, antioxidant supplements, ovulation induction with IUI",
       outcome: "Pregnancy achieved on second IUI cycle, wife lost 7 kg, thyroid and prolactin levels normalised",
       duration: "6 months",
-      testimonial: "Simple lifestyle changes, consistent medical guidance, and the right fertility plan helped us achieve what we had been waiting for. We are grateful for this journey and our little miracle.",
+      testimonial: "When Faith Fought Science and Won!",
       image: "couple-with-baby",
       tags: ["IVF", "PGT-A", "Unexplained Infertility"]
     },
@@ -185,6 +185,16 @@ export default function CaseStudies() {
                       <p className="italic flex-1">{currentCase.testimonial}</p>
                     </div>
                     <p className="text-right text-pink-100 text-sm mt-3">— {currentCase.patientInfo}</p>
+                  </div>
+
+                  {/* Read More Button */}
+                  <div className="mt-6">
+                    <a
+                      href={`/case-study/${currentCase.id}`}
+                      className="inline-block px-6 py-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-semibold rounded-full shadow hover:scale-105 transition-all duration-200"
+                    >
+                      Read More
+                    </a>
                   </div>
                 </div>
               </div>
