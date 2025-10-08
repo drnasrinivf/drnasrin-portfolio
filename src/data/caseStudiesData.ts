@@ -65,7 +65,7 @@ export const caseStudiesDetails: CaseStudy[] = [
     readTime: '4 min read',
     date: 'June 12, 2023',
     author: 'Dr. Nasrin Hasan',
-    image: 'couple-with-baby',
+    //image: 'couple-with-baby',
     content: [
       { type: 'paragraph', text: "A young couple from Bangladesh, aged 25 and 29, came to us after years of disappointment and heartbreak. " },
       { type: 'paragraph', text: "They had been trying to conceive for several years and had already undergone multiple IVF cycles in different centers, none of which resulted in embryo formation. Their main challenge was low ovarian reserve and poor egg quality, with an AMH level of 0.6 ng/ml." },
@@ -104,7 +104,7 @@ export const caseStudiesDetails: CaseStudy[] = [
     readTime: '4 min read',
     date: 'June 12, 2023',
     author: 'Dr. Nasrin Hasan',
-    image: 'couple-with-baby',
+    //image: 'couple-with-baby',
     content: [
       { type: 'paragraph', text: "A young couple from Bangladesh, aged 25 and 29, came to us after years of disappointment and heartbreak. " },
       { type: 'paragraph', text: "They had been trying to conceive for several years and had already undergone multiple IVF cycles in different centers, none of which resulted in embryo formation. Their main challenge was low ovarian reserve and poor egg quality, with an AMH level of 0.6 ng/ml." },
@@ -143,7 +143,7 @@ export const caseStudiesDetails: CaseStudy[] = [
     readTime: '4 min read',
     date: 'June 12, 2023',
     author: 'Dr. Nasrin Hasan',
-    image: 'couple-with-baby',
+    //image: 'couple-with-baby',
     content: [
       { type: 'paragraph', text: "A young couple from Bangladesh, aged 25 and 29, came to us after years of disappointment and heartbreak. " },
       { type: 'paragraph', text: "They had been trying to conceive for several years and had already undergone multiple IVF cycles in different centers, none of which resulted in embryo formation. Their main challenge was low ovarian reserve and poor egg quality, with an AMH level of 0.6 ng/ml." },
@@ -182,7 +182,7 @@ export const caseStudiesDetails: CaseStudy[] = [
     readTime: '4 min read',
     date: 'June 12, 2023',
     author: 'Dr. Nasrin Hasan',
-    image: 'couple-with-baby',
+    //image: 'couple-with-baby',
     content: [
       { type: 'paragraph', text: "A young couple from Bangladesh, aged 25 and 29, came to us after years of disappointment and heartbreak. " },
       { type: 'paragraph', text: "They had been trying to conceive for several years and had already undergone multiple IVF cycles in different centers, none of which resulted in embryo formation. Their main challenge was low ovarian reserve and poor egg quality, with an AMH level of 0.6 ng/ml." },
@@ -222,7 +222,7 @@ export const caseStudiesDetails: CaseStudy[] = [
     readTime: '4 min read',
     date: 'June 12, 2023',
     author: 'Dr. Nasrin Hasan',
-    image: 'couple-with-baby',
+    //image: 'couple-with-baby',
     content: [
       { type: 'paragraph', text: "A young couple from Bangladesh, aged 25 and 29, came to us after years of disappointment and heartbreak. " },
       { type: 'paragraph', text: "They had been trying to conceive for several years and had already undergone multiple IVF cycles in different centers, none of which resulted in embryo formation. Their main challenge was low ovarian reserve and poor egg quality, with an AMH level of 0.6 ng/ml." },
