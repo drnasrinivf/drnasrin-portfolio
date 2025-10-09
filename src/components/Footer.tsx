@@ -1,5 +1,6 @@
-import React from 'react';
-import { Heart, Phone, Mail, MapPin, Globe, Calendar, Award, Users, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Globe, Calendar, Award, Users, ArrowUp } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -142,7 +143,7 @@ export default function Footer() {
           </div>
         </div>
 
-        // ...existing code...
+  {/* ...existing code... */}
       </div>
 
       {/* Bottom Bar */}
@@ -152,9 +153,9 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-300">
               <p>&copy; 2024 Dr. Nasrin Hasan. All rights reserved.</p>
               <div className="flex space-x-4">
-                <a href="#" className="hover:text-pink-400 transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-pink-400 transition-colors">Terms of Service</a>
-                <a href="#" className="hover:text-pink-400 transition-colors">Medical Disclaimer</a>
+                <Link to="/privacy-policy" className="hover:text-pink-400 transition-colors">Privacy Policy</Link>
+                <Link to="/terms-conditions" className="hover:text-pink-400 transition-colors">Terms &amp; Conditions</Link>
+                <Link to="/medical-disclaimer" className="hover:text-pink-400 transition-colors">Medical Disclaimer</Link>
               </div>
             </div>
 
@@ -177,6 +178,17 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Floating WhatsApp button */}
+      <a
+        href="https://wa.me/919842070099"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="fixed right-6 bottom-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-colors"
+      >
+        <FaWhatsapp size={20} />
+      </a>
     </footer>
   );
 }

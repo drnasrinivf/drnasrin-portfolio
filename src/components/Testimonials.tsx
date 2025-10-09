@@ -1,84 +1,89 @@
 import React from 'react';
-import { Star, Quote, Heart, Award, Globe, Users } from 'lucide-react';
+import { Star, Quote, Award, Globe } from 'lucide-react';
 
 export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah & Michael Johnson",
-      location: "New York, USA",
+      name: "Patient Name",
+      location: "India",
       rating: 5,
-      text: "Dr. Johnson is simply amazing. After 3 failed IVF cycles with other doctors, she helped us achieve our dream. Her personalized approach and genuine care made all the difference. Our twin boys are now 2 years old!",
-      treatment: "IVF with PGT-A",
-      outcome: "Twins"
+      text: "Simple lifestyle changes, consistent medical guidance, and the right fertility plan helped us achieve what we had been waiting for. We are grateful for this journey and our little miracle",
+      treatment: "ovulation induction with IUI",
+      outcome: "Pregnancy achieved on second IUI cycle"
     },
     {
       id: 2,
-      name: "Maria Rodriguez",
-      location: "Madrid, Spain",
+      name: "Patient Name",
+      location: "India",
       rating: 5,
-      text: "I flew from Spain for treatment and it was the best decision ever. Dr. Johnson's expertise in endometriosis and her minimally invasive surgery gave me my life back. Now I'm 8 months pregnant naturally!",
-      treatment: "Laparoscopic Surgery + Natural Conception",
-      outcome: "Natural Pregnancy"
+      text: "After repeated failures and the fear of losing hope, we finally experienced the joy of parenthood with our own gametes. This journey has been nothing short of a miracle for us.",
+      treatment: "Exosome therapy via laparoscopy",
+      outcome: "successful pregnancy"
     },
     {
       id: 3,
-      name: "Priya & Raj Patel",
-      location: "London, UK",
+      name: "Patient Name",
+      location: "India",
       rating: 5,
-      text: "We were dealing with male factor infertility and felt hopeless. Dr. Johnson's advanced ICSI technique and her team's support throughout the process were incredible. Our daughter is our miracle!",
-      treatment: "ICSI",
+      text: "From being told we had no chance to holding our twins, this journey has been a life-changing miracle. With the right guidance and persistence, hope turned into reality",
+      treatment: "IVF + Embryo transfer in natural cycle",
       outcome: "Healthy Baby Girl"
     },
     {
       id: 4,
-      name: "Emma Thompson",
-      location: "Sydney, Australia",
+      name: "Patient Name",
+      location: "India",
       rating: 5,
-      text: "The online consultation process was seamless for international patients. Dr. Johnson coordinated everything perfectly for my treatment cycle. The care I received was exceptional from start to finish.",
-      treatment: "IVF",
-      outcome: "Successful Pregnancy"
+      text: "After years of waiting and failed attempts at adoption, surrogacy gave us hope and joy we never imagined possible. Today, we hold our own child and our hearts are full.",
+      treatment: "Surrogacy using couple’s own gametes (eggs and sperms)",
+      outcome: "Successful pregnancy through surrogacy"
     },
     {
       id: 5,
-      name: "Fatima Al-Zahra",
-      location: "Dubai, UAE",
+      name: "Patient Name",
+      location: "India",
       rating: 5,
-      text: "PCOS made my journey challenging, but Dr. Johnson's holistic approach changed everything. The lifestyle guidance combined with treatment helped me conceive naturally. Forever grateful!",
-      treatment: "PCOS Management",
-      outcome: "Natural Conception"
+      text: "After repeated heartbreaks, we finally found the right treatment path. Today, we hold our baby boy in our arms, and it feels like a dream come true",
+      treatment: "IVF + PGT",
+      outcome: "Successful pregnancy achieved"
     },
-    {
-      id: 6,
-      name: "Lisa Chen",
-      location: "Singapore",
-      rating: 5,
-      text: "Dr. Johnson's reputation brought me from Singapore. Her clinic's international patient services made everything smooth. The success speaks for itself - healthy baby boy after just one IVF cycle!",
-      treatment: "IVF",
-      outcome: "Healthy Baby Boy"
-    }
+    // {
+    //   id: 6,
+    //   name: "Lisa Chen",
+    //   location: "Singapore",
+    //   rating: 5,
+    //   text: "Dr. Johnson's reputation brought me from Singapore. Her clinic's international patient services made everything smooth. The success speaks for itself - healthy baby boy after just one IVF cycle!",
+    //   treatment: "IVF",
+    //   outcome: "Healthy Baby Boy"
+    // }
   ];
 
   const achievements = [
     {
+      year: "",
+      award: "Medal winner for honours in MBBS",
+      organization: ""
+    },
+    {
+      year: "2016",
+      award: "Best performing postgraduate",
+      organization: "Madras Medical College"
+    },
+    {
+      year: "2017",
+      award: "Winner of the Usha Krishna Award in Gynaec Oncology",
+      organization: ""
+    },
+    {
       year: "2023",
-      award: "Excellence in Patient Care",
-      organization: "International Fertility Association"
+      award: "Award for Clinical Excellence in Gynaecology",
+      organization: "Society for Women’s Welfare, Chennai"
     },
     {
-      year: "2022",
-      award: "Top Fertility Specialist",
-      organization: "Medical Excellence Awards"
-    },
-    {
-      year: "2021",
-      award: "Innovation in Reproductive Medicine",
-      organization: "Global Health Leadership"
-    },
-    {
-      year: "2020",
-      award: "Outstanding International Care",
-      organization: "World Medical Council"
+      year: "",
+      award: "Most sought-after gynaecologist for IVF in Chennai",
+      organization: ""
     }
   ];
 
@@ -207,33 +212,7 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
-
-          {/* International Recognition */}
-          <div className="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Globe className="text-white" size={24} />
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">Global Recognition</h4>
-                <p className="text-gray-600 text-sm">Featured in international medical journals and conferences</p>
-              </div>
-              <div>
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-white" size={24} />
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">Patient Advocacy</h4>
-                <p className="text-gray-600 text-sm">Board member of International Patient Care Association</p>
-              </div>
-              <div>
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="text-white" size={24} />
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">Excellence Standard</h4>
-                <p className="text-gray-600 text-sm">Certified by Global Healthcare Excellence Initiative</p>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>

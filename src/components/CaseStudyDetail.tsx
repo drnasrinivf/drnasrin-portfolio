@@ -9,6 +9,26 @@ export default function CaseStudyDetail() {
   const navigate = useNavigate();
   const caseStudy = caseStudiesDetails.find(cs => cs.id === Number(id));
 
+  const goToSection = (sectionId: string) => {
+    const maxAttempts = 20;
+    let attempts = 0;
+    navigate('/');
+
+    const tryScroll = () => {
+      attempts += 1;
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+      if (attempts < maxAttempts) {
+        setTimeout(tryScroll, 150);
+      }
+    };
+
+    setTimeout(tryScroll, 150);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -53,7 +73,7 @@ export default function CaseStudyDetail() {
     <div className="min-h-screen bg-white">
       <div className="bg-gradient-to-br from-pink-50 to-purple-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <button onClick={() => navigate('/')} className="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors mb-8 group">
+          <button onClick={() => goToSection('case-studies')} className="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors mb-8 group">
             <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
             <span className="font-medium">Back to Case Studies</span>
           </button>
@@ -129,13 +149,13 @@ export default function CaseStudyDetail() {
             <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8 border border-pink-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Start Your Journey?</h3>
               <p className="text-gray-600 mb-6">Schedule a consultation with Dr. Nasrin Hasan to discuss a personalised fertility treatment plan.</p>
-              <button onClick={() => { navigate('/'); setTimeout(() => { document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' }); }, 100); }} className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">Book Consultation</button>
+              <button onClick={() => goToSection('consultation')} className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">Book Consultation</button>
             </div>
           </div>
         </div>
 
         <div className="mt-12 text-center">
-          <button onClick={() => navigate('/')} className="inline-flex items-center space-x-2 text-pink-600 hover:text-purple-600 font-medium transition-colors group">
+          <button onClick={() => goToSection('case-studies')} className="inline-flex items-center space-x-2 text-pink-600 hover:text-purple-600 font-medium transition-colors group">
             <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
             <span>Back to All Case Studies</span>
           </button>

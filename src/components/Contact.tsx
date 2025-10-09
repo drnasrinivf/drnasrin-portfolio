@@ -1,40 +1,10 @@
-import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Globe, MessageCircle, Send, CheckCircle, Video, Calendar } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Globe, Video, Calendar } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    country: '',
-    subject: '',
-    message: '',
-    preferredContact: 'email'
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    // Here you would typically send the form data to your backend
-    setTimeout(() => setSubmitted(false), 3000);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // contact form has been commented out — state and handlers removed
 
   const contactInfo = [
-    {
-      icon: MapPin,
-      title: "Clinic Location",
-      details: ["123 Medical Center Drive", "New York, NY 10001", "United States"],
-      color: "text-pink-500"
-    },
     {
       icon: Phone,
       title: "Phone Numbers",
@@ -89,8 +59,9 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left column: Quick Actions + Contact Details */}
+          {/**
           <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-3xl p-8 border border-pink-100">
             <div className="flex items-center space-x-3 mb-8">
               <MessageCircle className="text-pink-500" size={24} />
@@ -107,124 +78,12 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Country</label>
-                    <input
-                      type="text"
-                      name="country"
-                      value={formData.country}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
-                  <select
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white"
-                    required
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="consultation">Schedule Consultation</option>
-                    <option value="treatment-info">Treatment Information</option>
-                    <option value="international-patient">International Patient Services</option>
-                    <option value="insurance">Insurance & Pricing</option>
-                    <option value="general">General Inquiry</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Contact Method</label>
-                  <div className="grid grid-cols-3 gap-4">
-                    {['email', 'phone', 'video'].map((method) => (
-                      <button
-                        key={method}
-                        type="button"
-                        onClick={() => setFormData({...formData, preferredContact: method})}
-                        className={`p-3 rounded-lg border-2 transition-all ${
-                          formData.preferredContact === method
-                            ? 'border-pink-500 bg-pink-50 text-pink-700'
-                            : 'border-gray-200 hover:border-pink-300'
-                        }`}
-                      >
-                        {method === 'email' && <Mail className="mx-auto mb-1" size={16} />}
-                        {method === 'phone' && <Phone className="mx-auto mb-1" size={16} />}
-                        {method === 'video' && <Video className="mx-auto mb-1" size={16} />}
-                        <div className="text-xs font-medium capitalize">{method}</div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white"
-                    placeholder="Tell us about your situation, questions, or how we can help you..."
-                    required
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-8 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <Send size={16} />
-                  <span>Send Message</span>
-                </button>
-
-                <p className="text-center text-sm text-gray-500">
-                  We typically respond within 24 hours. For urgent matters, please call us directly.
-                </p>
+                ...form fields...
               </form>
             )}
           </div>
+          */}
 
-          {/* Contact Information */}
           <div className="space-y-8">
             {/* Quick Actions */}
             <div className="bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl p-8 text-white">
@@ -237,13 +96,13 @@ export default function Contact() {
                     <p className="text-pink-100 text-sm">Online or in-person</p>
                   </div>
                 </button>
-                <button className="w-full flex items-center space-x-3 bg-white/20 backdrop-blur-sm p-4 rounded-xl hover:bg-white/30 transition-all">
+                <a href="tel:+12345678900" className="w-full flex items-center space-x-3 bg-white/20 backdrop-blur-sm p-4 rounded-xl hover:bg-white/30 transition-all">
                   <Phone className="text-white" size={20} />
                   <div className="text-left">
                     <p className="font-semibold">Call Us Now</p>
-                    <p className="text-pink-100 text-sm">+1 (234) 567-8900</p>
+                    <p className="text-pink-100 text-sm">Available 24/7</p>
                   </div>
-                </button>
+                </a>
                 <button className="w-full flex items-center space-x-3 bg-white/20 backdrop-blur-sm p-4 rounded-xl hover:bg-white/30 transition-all">
                   <Video className="text-white" size={20} />
                   <div className="text-left">
@@ -270,8 +129,11 @@ export default function Contact() {
                 </div>
               ))}
             </div>
+          </div>
+          
 
-            {/* International Support */}
+          {/* Right column: International Support + Social + Map */}
+          <div className="space-y-8">
             <div className="bg-purple-50 rounded-2xl p-6 border border-purple-200">
               <div className="flex items-center space-x-3 mb-4">
                 <Globe className="text-purple-600" size={20} />
@@ -290,10 +152,9 @@ export default function Contact() {
               </ul>
             </div>
 
-            {/* Social Media */}
             <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-100">
               <h4 className="font-bold text-gray-900 mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 mb-4">
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon;
                   return (
@@ -309,24 +170,25 @@ export default function Contact() {
                   );
                 })}
               </div>
-              <p className="text-gray-600 text-sm mt-4">
+              <p className="text-gray-600 text-sm">
                 Stay updated with success stories, health tips, and treatment insights.
               </p>
+            </div>
+
+            <div className="mt-0">
+              <div className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl h-64 flex items-center justify-center border border-pink-200">
+                <div className="text-center">
+                  <MapPin className="mx-auto mb-4 text-pink-600" size={48} />
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">Find Our Clinic</h4>
+                  <p className="text-gray-600">123 Medical Center Drive, New York, NY 10001</p>
+                  <p className="text-gray-500 text-sm mt-2">Interactive map would be embedded here</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Map Placeholder */}
-        <div className="mt-16">
-          <div className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl h-64 flex items-center justify-center border border-pink-200">
-            <div className="text-center">
-              <MapPin className="mx-auto mb-4 text-pink-600" size={48} />
-              <h4 className="text-xl font-bold text-gray-800 mb-2">Find Our Clinic</h4>
-              <p className="text-gray-600">123 Medical Center Drive, New York, NY 10001</p>
-              <p className="text-gray-500 text-sm mt-2">Interactive map would be embedded here</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );

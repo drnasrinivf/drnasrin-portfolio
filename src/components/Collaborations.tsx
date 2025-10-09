@@ -1,86 +1,17 @@
-import React from 'react';
-import { Users, Calendar, Mic, Award, BookOpen, Globe, Building, Video } from 'lucide-react';
+import { Mic, Building } from 'lucide-react';
 
 export default function Collaborations() {
-  const partnerships = [
-    {
-      name: "Harvard Medical School",
-      type: "Academic Partnership",
-      description: "Guest lecturer in reproductive medicine and research collaboration"
-    },
-    {
-      name: "International Fertility Foundation",
-      type: "Board Member",
-      description: "Contributing to global fertility care standards and policies"
-    },
-    {
-      name: "Corporate Wellness Programs",
-      type: "Healthcare Provider",
-      description: "Fertility education and services for Fortune 500 companies"
-    },
-    {
-      name: "Medical Tourism Association",
-      type: "Advisory Board",
-      description: "Developing international patient care protocols and standards"
-    }
+  // Content simplified and aligned with the provided copy
+  const partnershipsBullets = [
+    'Designing corporate wellness and fertility programs for employees',
+    'Institutional collaborations for clinical training, workshops, and curriculum development',
+    'Referral networks and joint initiatives to improve fertility care outcomes'
   ];
 
-  const speakingEvents = [
-    {
-      event: "International Fertility Conference 2024",
-      location: "London, UK",
-      topic: "Innovations in IVF Technology",
-      type: "Keynote Speaker",
-      date: "March 2024"
-    },
-    {
-      event: "Global Women's Health Summit",
-      location: "New York, USA",
-      topic: "Personalized Fertility Care for International Patients",
-      type: "Panel Discussion",
-      date: "February 2024"
-    },
-    {
-      event: "European Society of Human Reproduction",
-      location: "Barcelona, Spain",
-      topic: "Advanced Laparoscopic Techniques in Fertility Treatment",
-      type: "Workshop Leader",
-      date: "January 2024"
-    },
-    {
-      event: "Asian Pacific Fertility Congress",
-      location: "Singapore",
-      topic: "Cultural Sensitivity in International Fertility Care",
-      type: "Invited Speaker",
-      date: "December 2023"
-    }
-  ];
-
-  const mediaAppearances = [
-    {
-      outlet: "BBC Health",
-      type: "Television Interview",
-      topic: "Breaking Barriers in Fertility Treatment",
-      date: "March 2024"
-    },
-    {
-      outlet: "Medical News Today",
-      type: "Expert Column",
-      topic: "The Future of IVF Technology",
-      date: "February 2024"
-    },
-    {
-      outlet: "International Health Podcast",
-      type: "Podcast Guest",
-      topic: "Fertility Tourism: Opportunities and Considerations",
-      date: "January 2024"
-    },
-    {
-      outlet: "Health & Wellness Magazine",
-      type: "Feature Article",
-      topic: "Comprehensive Fertility Care Approach",
-      date: "December 2023"
-    }
+  const eventsBullets = [
+    'Keynote talks, panel discussions, and interactive workshops at national and international forums',
+    "Hands-on training in IVF, reproductive medicine, and women’s health for clinicians",
+    'Media interviews, webinars, and articles to educate and guide patients globally'
   ];
 
   return (
@@ -113,93 +44,44 @@ export default function Collaborations() {
         <div className="mb-16">
           <div className="flex items-center justify-center space-x-3 mb-8">
             <Building className="text-pink-500" size={24} />
-            <h3 className="text-3xl font-bold text-gray-900">Strategic Partnerships</h3>
+            <h3 className="text-3xl font-bold text-gray-900">Partnerships with Corporates & Institutions</h3>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {partnerships.map((partnership, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-lg border border-purple-100 p-8 hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center">
-                    <Users className="text-white" size={20} />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">{partnership.name}</h4>
-                    <div className="inline-flex items-center px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium mb-3">
-                      {partnership.type}
-                    </div>
-                    <p className="text-gray-600 leading-relaxed">{partnership.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+
+          <div className="max-w-3xl mx-auto text-gray-700">
+            <p className="mb-6">Designing practical collaborations that translate fertility science into institutional impact.</p>
+            <ul className="space-y-3 list-disc list-inside text-gray-600">
+              {partnershipsBullets.map((b, i) => (
+                <li key={i} className="flex items-start">
+                  <span className="mr-3 text-pink-500 mt-1">•</span>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        {/* Speaking Events Section */}
+        {/* Conferences, Workshops & Media Appearances (combined) */}
         <div className="mb-16">
           <div className="flex items-center justify-center space-x-3 mb-8">
             <Mic className="text-purple-500" size={24} />
-            <h3 className="text-3xl font-bold text-gray-900">International Speaking Events</h3>
+            <h3 className="text-3xl font-bold text-gray-900">Conferences, Workshops & Media Appearances</h3>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {speakingEvents.map((event, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-lg border border-purple-100 p-8 hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="text-pink-500" size={16} />
-                    <span className="text-sm text-pink-600 font-medium">{event.date}</span>
-                  </div>
-                  <div className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">
-                    {event.type}
-                  </div>
-                </div>
-                
-                <h4 className="text-xl font-bold text-gray-900 mb-2">{event.event}</h4>
-                <div className="flex items-center space-x-2 mb-3">
-                  <Globe className="text-gray-400" size={14} />
-                  <span className="text-gray-500 text-sm">{event.location}</span>
-                </div>
-                <p className="text-gray-600 leading-relaxed">{event.topic}</p>
-              </div>
-            ))}
+
+          <div className="max-w-3xl mx-auto text-gray-700">
+            <p className="mb-6">Sharing knowledge at conferences and through media to make fertility science accessible and practical.</p>
+            <ul className="space-y-3 list-disc list-inside text-gray-600">
+              {eventsBullets.map((b, i) => (
+                <li key={i} className="flex items-start">
+                  <span className="mr-3 text-pink-500 mt-1">•</span>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        {/* Media Appearances Section */}
-        <div className="mb-16">
-          <div className="flex items-center justify-center space-x-3 mb-8">
-            <Video className="text-pink-500" size={24} />
-            <h3 className="text-3xl font-bold text-gray-900">Media Appearances</h3>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {mediaAppearances.map((appearance, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-xl p-6 border border-pink-100"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <h4 className="font-bold text-gray-900">{appearance.outlet}</h4>
-                  <span className="text-xs text-gray-500">{appearance.date}</span>
-                </div>
-                <div className="inline-flex items-center px-2 py-1 bg-white text-pink-600 rounded-md text-xs font-medium mb-2">
-                  {appearance.type}
-                </div>
-                <p className="text-gray-600 text-sm">{appearance.topic}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Research & Publications */}
+        {/*
+        Research & Publications
         <div className="bg-gradient-to-r from-pink-500 to-purple-500 rounded-3xl p-8 md:p-12 text-white">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center space-x-3 mb-4">
@@ -232,8 +114,10 @@ export default function Collaborations() {
             </button>
           </div>
         </div>
+        */}
 
-        {/* Upcoming Events */}
+        {/*
+        Upcoming Events
         <div className="mt-16 text-center">
           <div className="bg-white rounded-2xl shadow-lg border border-purple-100 p-8">
             <div className="flex items-center justify-center space-x-3 mb-6">
@@ -248,6 +132,7 @@ export default function Collaborations() {
             </button>
           </div>
         </div>
+        */}
       </div>
     </div>
   );

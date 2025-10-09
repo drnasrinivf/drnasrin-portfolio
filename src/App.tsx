@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 // Consultation component intentionally left in the project but not embedded in HomePage
+import Consultation from './components/Consultation';
 import CaseStudies from './components/CaseStudies';
 import Testimonials from './components/Testimonials';
 import Collaborations from './components/Collaborations';
@@ -14,13 +15,17 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BlogPost from './components/BlogPost';
 import CaseStudyDetail from './components/CaseStudyDetail';
+import ServiceDetail from './components/ServiceDetail';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import MedicalDisclaimer from './components/MedicalDisclaimer';
+import TermsConditions from './components/TermsConditions';
 
 function HomePage() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-  const sections = ['home', 'about', 'services', 'case-studies', 'testimonials', 'collaborations', 'blog', 'faq', 'contact'];
+  const sections = ['home', 'about', 'services', 'consultation', 'case-studies', 'testimonials', 'collaborations', 'blog', 'faq', 'contact'];
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -52,6 +57,10 @@ function HomePage() {
 
       <section id="services">
         <Services />
+      </section>
+
+      <section id="consultation">
+        <Consultation />
       </section>
 
       <section id="case-studies">
@@ -90,6 +99,10 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/case-study/:id" element={<CaseStudyDetail />} />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/medical-disclaimer" element={<MedicalDisclaimer />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
       </Routes>
     </Router>
   );
