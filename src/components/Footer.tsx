@@ -46,10 +46,10 @@ export default function Footer() {
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="w-full flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-0 text-center md:text-left">
+        <div className="w-full flex flex-col md:flex-row md:justify-between md:items-start gap-4 md:gap-0 text-left">
           {/* Clinic Info */}
-          <div className="flex-1 mb-8 md:mb-0 md:mr-6">
-            <div className="flex items-center justify-center md:justify-start space-x-3 mb-3">
+          <div className="flex-1 mb-4 md:mb-0 md:mr-6">
+            <div className="flex items-center justify-start space-x-3 mb-3">
               <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-400 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Dr</span>
               </div>
@@ -61,8 +61,8 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex-1 mb-8 md:mb-0 md:mr-6">
-            <h3 className="text-lg font-bold mb-3 text-white tracking-wide">Quick Links</h3>
+          <div className="flex-1 mb-4 md:mb-0 md:mr-6">
+            <h3 className="text-lg font-bold mb-3 text-white tracking-wide text-left">Quick Links</h3>
             <div className="space-y-2">
               {quickLinks.map((link) => (
                 <button
@@ -77,25 +77,25 @@ export default function Footer() {
           </div>
 
           {/* Services Links */}
-          <div className="flex-1 mb-8 md:mb-0 md:mr-6">
-            <h3 className="text-lg font-bold mb-3 text-white tracking-wide">Services</h3>
+          <div className="flex-1 mb-4 md:mb-0 md:mr-6">
+            <h3 className="text-lg font-bold mb-3 text-white tracking-wide text-left">Services</h3>
             <div className="space-y-2">
-              <Link to="/services/infertility" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Infertility Treatment</Link>
-              <Link to="/services/ivf" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">IVF Treatment</Link>
-              <Link to="/services/iui" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">IUI Treatment</Link>
-              <Link to="/services/gynecology" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Gynecological Care</Link>
-              <Link to="/services/laparoscopy" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Laparoscopic Surgery</Link>
-              <Link to="/services/pcos" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">PCOS Management</Link>
+              <Link to="/services/infertility" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm text-left">Infertility Treatment</Link>
+              <Link to="/services/ivf" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm text-left">IVF Treatment</Link>
+              <Link to="/services/iui" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm text-left">IUI Treatment</Link>
+              <Link to="/services/gynecology" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm text-left">Gynecological Care</Link>
+              <Link to="/services/laparoscopy" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm text-left">Laparoscopic Surgery</Link>
+              <Link to="/services/pcos" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm text-left">PCOS Management</Link>
             </div>
           </div>
 
           {/* Legal Links */}
-          <div className="flex-1 mb-8 md:mb-0">
-            <h3 className="text-lg font-bold mb-3 text-white tracking-wide">Legal</h3>
+          <div className="flex-1 mb-4 md:mb-0">
+            <h3 className="text-lg font-bold mb-3 text-white tracking-wide text-left">Legal</h3>
             <div className="space-y-2">
-              <Link to="/privacy-policy" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Privacy Policy</Link>
-              <Link to="/terms-conditions" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Terms &amp; Conditions</Link>
-              <Link to="/medical-disclaimer" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Medical Disclaimer</Link>
+              <Link to="/privacy-policy" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm text-left">Privacy Policy</Link>
+              <Link to="/terms-conditions" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm text-left">Terms &amp; Conditions</Link>
+              <Link to="/medical-disclaimer" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm text-left">Medical Disclaimer</Link>
             </div>
           </div>
         </div>

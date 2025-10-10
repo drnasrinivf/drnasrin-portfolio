@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowLeft, Heart, Baby, Stethoscope, BookOpen, Tag } from 'lucide-react';
 import { blogPosts } from '../data/blogData';
+import Header from './Header';
 
 export default function BlogPost() {
   const { id } = useParams();
@@ -27,7 +28,6 @@ export default function BlogPost() {
       </div>
     );
   }
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'fertility':
@@ -48,7 +48,12 @@ export default function BlogPost() {
       <div className="bg-gradient-to-br from-pink-50 to-purple-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <button
-            onClick={() => navigate('/')}
+            onClick={() => {
+              navigate('/');
+              setTimeout(() => {
+                document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}
             className="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors mb-8 group"
           >
             <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
@@ -153,7 +158,12 @@ export default function BlogPost() {
 
         <div className="mt-12 text-center">
           <button
-            onClick={() => navigate('/')}
+            onClick={() => {
+              navigate('/');
+              setTimeout(() => {
+                document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}
             className="inline-flex items-center space-x-2 text-pink-600 hover:text-purple-600 font-medium transition-colors group"
           >
             <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
