@@ -34,7 +34,7 @@ export default function Collaborations() {
               Fertility Medicine
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-justify">
             Through strategic partnerships, international speaking engagements, and media collaborations, 
             we're shaping the future of fertility care and expanding access to quality treatment worldwide.
           </p>
@@ -48,7 +48,7 @@ export default function Collaborations() {
           </div>
 
           <div className="max-w-3xl mx-auto text-gray-700">
-            <p className="mb-6">Designing practical collaborations that translate fertility science into institutional impact.</p>
+            <p className="mb-6 text-justify">Designing practical collaborations that translate fertility science into institutional impact.</p>
             <ul className="space-y-3 list-disc list-inside text-gray-600">
               {partnershipsBullets.map((b, i) => (
                 <li key={i} className="flex items-start">
@@ -68,7 +68,7 @@ export default function Collaborations() {
           </div>
 
           <div className="max-w-3xl mx-auto text-gray-700">
-            <p className="mb-6">Sharing knowledge at conferences and through media to make fertility science accessible and practical.</p>
+            <p className="mb-6 text-justify">Sharing knowledge at conferences and through media to make fertility science accessible and practical.</p>
             <ul className="space-y-3 list-disc list-inside text-gray-600">
               {eventsBullets.map((b, i) => (
                 <li key={i} className="flex items-start">

@@ -41,50 +41,34 @@ export default function Footer() {
     'Cultural Liaison'
   ];
 
+
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="w-full flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-0 text-center md:text-left">
           {/* Clinic Info */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-3">
+          <div className="flex-1 mb-8 md:mb-0 md:mr-6">
+            <div className="flex items-center justify-center md:justify-start space-x-3 mb-3">
               <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-400 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Dr</span>
               </div>
               <span className="text-xl font-bold">Dr. Nasrin Hasan</span>
             </div>
-            
-            <p className="text-gray-300 leading-relaxed">
-              Leading fertility specialist dedicated to helping families worldwide achieve their dreams of parenthood 
-              through compassionate care and advanced treatments.
+            <p className="text-gray-300 leading-relaxed text-sm">
+              Leading fertility specialist dedicated to helping families worldwide achieve their dreams of parenthood through compassionate care and advanced treatments.
             </p>
-            
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Award className="text-pink-400" size={16} />
-                <span className="text-sm">Excellence in Patient Care 2023</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Users className="text-purple-400" size={16} />
-                <span className="text-sm">5000+ Happy Families</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Globe className="text-pink-400" size={16} />
-                <span className="text-sm">50+ Countries Served</span>
-              </div>
-            </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-bold mb-6 text-white">Quick Links</h3>
-            <div className="space-y-3">
+          <div className="flex-1 mb-8 md:mb-0 md:mr-6">
+            <h3 className="text-lg font-bold mb-3 text-white tracking-wide">Quick Links</h3>
+            <div className="space-y-2">
               {quickLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm"
+                  className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm text-left w-full"
                 >
                   {link.name}
                 </button>
@@ -92,73 +76,38 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-bold mb-6 text-white">Our Services</h3>
-            <div className="space-y-3">
-              {services.map((service) => (
-                <div key={service} className="text-gray-300 text-sm">
-                  {service}
-                </div>
-              ))}
+          {/* Services Links */}
+          <div className="flex-1 mb-8 md:mb-0 md:mr-6">
+            <h3 className="text-lg font-bold mb-3 text-white tracking-wide">Services</h3>
+            <div className="space-y-2">
+              <Link to="/services/infertility" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Infertility Treatment</Link>
+              <Link to="/services/ivf" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">IVF Treatment</Link>
+              <Link to="/services/iui" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">IUI Treatment</Link>
+              <Link to="/services/gynecology" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Gynecological Care</Link>
+              <Link to="/services/laparoscopy" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Laparoscopic Surgery</Link>
+              <Link to="/services/pcos" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">PCOS Management</Link>
             </div>
           </div>
 
-          {/* Contact & International */}
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-bold mb-4 text-white">Contact Information</h3>
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="text-pink-400 mt-1" size={16} />
-                  <div className="text-gray-300 text-sm">
-                    <p>123 Medical Center Drive</p>
-                    <p>New York, NY 10001</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="text-purple-400" size={16} />
-                  <span className="text-gray-300 text-sm">+1 (234) 567-8900</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="text-pink-400" size={16} />
-                  <span className="text-gray-300 text-sm">info@drnasrin.com</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-3 text-white flex items-center space-x-2">
-                <Globe className="text-purple-400" size={16} />
-                <span>International Services</span>
-              </h4>
-              <div className="space-y-2">
-                {internationalServices.slice(0, 3).map((service) => (
-                  <div key={service} className="text-gray-300 text-xs">
-                    • {service}
-                  </div>
-                ))}
-              </div>
+          {/* Legal Links */}
+          <div className="flex-1 mb-8 md:mb-0">
+            <h3 className="text-lg font-bold mb-3 text-white tracking-wide">Legal</h3>
+            <div className="space-y-2">
+              <Link to="/privacy-policy" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Privacy Policy</Link>
+              <Link to="/terms-conditions" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Terms &amp; Conditions</Link>
+              <Link to="/medical-disclaimer" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-sm">Medical Disclaimer</Link>
             </div>
           </div>
         </div>
-
-  {/* ...existing code... */}
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-300">
               <p>&copy; 2024 Dr. Nasrin Hasan. All rights reserved.</p>
-              <div className="flex space-x-4">
-                <Link to="/privacy-policy" className="hover:text-pink-400 transition-colors">Privacy Policy</Link>
-                <Link to="/terms-conditions" className="hover:text-pink-400 transition-colors">Terms &amp; Conditions</Link>
-                <Link to="/medical-disclaimer" className="hover:text-pink-400 transition-colors">Medical Disclaimer</Link>
-              </div>
             </div>
-
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => scrollToSection('consultation')}
@@ -167,7 +116,6 @@ export default function Footer() {
                 <Calendar size={14} />
                 <span>Book Consultation</span>
               </button>
-              
               <button
                 onClick={scrollToTop}
                 className="w-10 h-10 bg-gray-700 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:-translate-y-0.5"

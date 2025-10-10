@@ -33,14 +33,14 @@ export default function About() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900">My Journey & Story</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-justify">
                 Hi, I’m Dr. Nasrin, a fertility specialist and Founder of Eva IVF & Women’s Centre in Chennai. 
                 With 15+ years of experience in reproductive medicine, IVF, ICSI, IUI, and fertility preservation, 
                 I have helped couples from India and abroad achieve their dream of parenthood. My training at Madras Medical College, 
                 along with advanced expertise in reproductive endocrinology, andrology, and minimal access surgery, ensures world-class care with compassion.
 
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-justify">
                 Becoming a doctor was my calling. Becoming an entrepreneur was my courage. But helping people become parents that’s my purpose. 
                 Eva IVF was built not just as a fertility clinic, but as a safe space for hope. Fertility care is more than science, it is emotional,
                  personal, and deeply human. Every couple who walks through our doors carries a unique story, and those stories shape the way we care.
@@ -53,13 +53,13 @@ export default function About() {
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <Heart className="text-pink-500 mt-1" size={16} />
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-sm text-justify">
                     <strong>Mission</strong> My mission is to help couples worldwide find hope and clarity in their fertility journey. Through advanced treatments like IVF, ICSI, IUI, and fertility preservation, I provide medical expertise with a personal touch. Every patient across the globe deserves care that balances science with compassion
                   </p>
                 </div>
                 {/* <div className="flex items-start space-x-3">
                   <Globe className="text-purple-500 mt-1" size={16} />
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-sm text-justify">
                     <strong>Global Accessibility:</strong> Quality fertility care should be accessible to patients worldwide.
                   </p>
                 </div> */}
@@ -108,20 +108,24 @@ export default function About() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
+                  <div className="text-2xl font-bold mb-1">2016</div>
+                  <p className="text-sm opacity-90">Medal winner for Honours in MBBS</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold mb-1">2016</div>
+                  <p className="text-sm opacity-90">Best Performing Postgraduate<br/>Madras Medical College</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold mb-1">2017</div>
+                  <p className="text-sm opacity-90">Winner of the Usha Krishna Award in Gynaec Oncology</p>
+                </div>
+                <div className="text-center">
                   <div className="text-2xl font-bold mb-1">2023</div>
-                  <p className="text-sm opacity-90">Excellence in Patient Care</p>
+                  <p className="text-sm opacity-90">Award for Clinical Excellence in Gynaecology<br/>Society for Women’s Welfare, Chennai</p>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold mb-1">2022</div>
-                  <p className="text-sm opacity-90">Top Fertility Specialist</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold mb-1">2021</div>
-                  <p className="text-sm opacity-90">Innovation in IVF</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold mb-1">2020</div>
-                  <p className="text-sm opacity-90">Global Healthcare Leader</p>
+                <div className="text-center col-span-2">
+                  <div className="text-2xl font-bold mb-1">—</div>
+                  <p className="text-sm opacity-90">Most sought-after gynaecologist for IVF in Chennai</p>
                 </div>
               </div>
             </div>
@@ -132,7 +136,7 @@ export default function About() {
                 <Users className="text-purple-600" size={20} />
                 <h4 className="text-lg font-bold text-gray-900">International Expertise</h4>
               </div>
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="text-gray-600 text-sm mb-4 text-justify">
                 Proudly serving patients from over 50 countries with multilingual support, 
                 cultural sensitivity, and comprehensive care coordination.
               </p>

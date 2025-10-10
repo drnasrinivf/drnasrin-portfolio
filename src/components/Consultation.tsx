@@ -28,29 +28,26 @@ export default function Consultation() {
           </p>
         </div>
 
-        {/* Calendly Booking Widget */}
-        <div className="bg-white rounded-2xl shadow-2xl border border-purple-100 px-4 sm:px-8 py-6 sm:py-8 flex flex-col items-center overflow-hidden">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center justify-center text-center">
-            <Calendar className="text-pink-500 mr-2" size={28} />
+        {/* Calendly Booking Widget - single frame, mobile friendly */}
+        <div className="bg-white rounded-2xl shadow-2xl border border-purple-100 px-2 sm:px-6 py-4 sm:py-8 w-full max-w-2xl mx-auto flex flex-col items-center overflow-hidden">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center justify-center text-center">
+            <Calendar className="text-pink-500 mr-2" size={24} />
             Book Your Appointment Instantly
           </h3>
-          {/* Constrain calendar width and ensure it's centered with padding on small screens */}
-          <div className="w-full max-w-3xl mx-auto min-h-[560px] sm:min-h-[700px] overflow-hidden">
-            <InlineWidget
-              url="https://calendly.com/drnasrinivf/30min"
-              styles={{ width: '100%', minHeight: '560px', borderRadius: '1rem', boxShadow: '0 2px 16px rgba(236, 72, 153, 0.15)' }}
-              pageSettings={{
-                backgroundColor: '#fff',
-                hideEventTypeDetails: false,
-                hideLandingPageDetails: false,
-                primaryColor: '#ec4899',
-                textColor: '#1f2937',
-              }}
-            />
-          </div>
-          <div className="mt-8 text-center">
-            <p className="text-gray-600 text-sm">
-              Powered by <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" className="text-pink-500 font-semibold underline">Calendly</a> instantly confirmed and double bookings are prevented.
+          <InlineWidget
+            url="https://calendly.com/drnasrinivf/30min"
+            styles={{ width: '100%', minHeight: '420px', borderRadius: '1rem', boxShadow: '0 2px 16px rgba(236, 72, 153, 0.15)' }}
+            pageSettings={{
+              backgroundColor: '#fff',
+              hideEventTypeDetails: false,
+              hideLandingPageDetails: false,
+              primaryColor: '#ec4899',
+              textColor: '#1f2937',
+            }}
+          />
+          <div className="mt-4 text-center">
+            <p className="text-gray-600 text-xs sm:text-sm">
+              Powered by <a href="https://calendly.com/" target="_blank" rel="noopener noreferrer" className="text-pink-500 font-semibold underline">Calendly</a> — instantly confirmed, no double bookings.
             </p>
           </div>
         </div>

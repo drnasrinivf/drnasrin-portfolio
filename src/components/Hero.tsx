@@ -52,19 +52,19 @@ export default function Hero() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-                  15+
+                  10+
                 </div>
                 <p className="text-gray-600 text-sm">Years Experience</p>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-                  5000+
+                  1000+
                 </div>
                 <p className="text-gray-600 text-sm">Happy Families</p>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-                  50+
+                  10+
                 </div>
                 <p className="text-gray-600 text-sm">Countries Served</p>
               </div>
@@ -129,7 +129,7 @@ export default function Hero() {
                   <Award className="text-pink-500" size={20} />
                   <div>
                     <p className="font-semibold text-sm">Award Winner</p>
-                    <p className="text-xs text-gray-500">Excellence in Care 2023</p>
+                    <p className="text-xs text-gray-500">Most sought-after gynaecologist for IVF</p>
                   </div>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function Hero() {
                   <Users className="text-purple-500" size={20} />
                   <div>
                     <p className="font-semibold text-sm">Global Reach</p>
-                    <p className="text-xs text-gray-500">50+ Countries</p>
+                    <p className="text-xs text-gray-500">10+ Countries</p>
                   </div>
                 </div>
               </div>

@@ -7,21 +7,35 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Phone Numbers",
-      details: ["+1 (234) 567-8900", "+1 (234) 567-8901", "24/7 Emergency Line"],
+      title: "Phone Number",
+      details: ["+91 74488 22280"],
       color: "text-purple-500"
     },
     {
       icon: Mail,
-      title: "Email Addresses",
-      details: ["info@drjohnson.com", "international@drjohnson.com", "appointments@drjohnson.com"],
+      title: "Email Address",
+      details: ["info@evafertilityclinic.com"],
       color: "text-pink-500"
     },
     {
       icon: Clock,
       title: "Opening Hours",
-      details: ["Mon - Fri: 8:00 AM - 6:00 PM", "Saturday: 9:00 AM - 2:00 PM", "Sunday: Emergency Only"],
+      details: [
+        "Monday – Saturday: 09am - 09pm",
+        "Sunday: 09am - 01pm"
+      ],
       color: "text-purple-500"
+    },
+    {
+      icon: MapPin,
+      title: "Find Our Clinic",
+      details: [
+        "Eva IVF and Women’s Care, Plot No 10 ;",
+        "23, Bazar Main Road,",
+        "Ram Nagar South, Madipakkam,",
+        "Chennai – 600091"
+      ],
+      color: "text-pink-600"
     }
   ];
 
@@ -85,33 +99,7 @@ export default function Contact() {
           */}
 
           <div className="space-y-8">
-            {/* Quick Actions */}
-            <div className="bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Quick Actions</h3>
-              <div className="space-y-4">
-                <button className="w-full flex items-center space-x-3 bg-white/20 backdrop-blur-sm p-4 rounded-xl hover:bg-white/30 transition-all">
-                  <Calendar className="text-white" size={20} />
-                  <div className="text-left">
-                    <p className="font-semibold">Book Free Consultation</p>
-                    <p className="text-pink-100 text-sm">Online or in-person</p>
-                  </div>
-                </button>
-                <a href="tel:+12345678900" className="w-full flex items-center space-x-3 bg-white/20 backdrop-blur-sm p-4 rounded-xl hover:bg-white/30 transition-all">
-                  <Phone className="text-white" size={20} />
-                  <div className="text-left">
-                    <p className="font-semibold">Call Us Now</p>
-                    <p className="text-pink-100 text-sm">Available 24/7</p>
-                  </div>
-                </a>
-                <button className="w-full flex items-center space-x-3 bg-white/20 backdrop-blur-sm p-4 rounded-xl hover:bg-white/30 transition-all">
-                  <Video className="text-white" size={20} />
-                  <div className="text-left">
-                    <p className="font-semibold">Virtual Consultation</p>
-                    <p className="text-pink-100 text-sm">Free for international patients</p>
-                  </div>
-                </button>
-              </div>
-            </div>
+            {/* ...existing code... */}
 
             {/* Contact Details */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -175,16 +163,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="mt-0">
-              <div className="bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl h-64 flex items-center justify-center border border-pink-200">
-                <div className="text-center">
-                  <MapPin className="mx-auto mb-4 text-pink-600" size={48} />
-                  <h4 className="text-xl font-bold text-gray-800 mb-2">Find Our Clinic</h4>
-                  <p className="text-gray-600">123 Medical Center Drive, New York, NY 10001</p>
-                  <p className="text-gray-500 text-sm mt-2">Interactive map would be embedded here</p>
-                </div>
-              </div>
-            </div>
+            {/* ...existing code... */}
           </div>
         </div>
 

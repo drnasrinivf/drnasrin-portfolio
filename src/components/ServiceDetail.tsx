@@ -115,33 +115,18 @@ const servicesContent: Record<string, any> = {
   }
 };
 
+import { useEffect } from 'react';
+
 export default function ServiceDetail(): JSX.Element {
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   // Navigate to home then scroll to consultation section. Uses retries because the element
   // may mount after navigation in the SPA.
-  const goToConsultation = () => {
-    const maxAttempts = 20;
-    let attempts = 0;
-
-    // Navigate to root first
-    navigate('/');
-
-    const tryScroll = () => {
-      attempts += 1;
-      const el = document.getElementById('consultation');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        return;
-      }
-      if (attempts < maxAttempts) {
-        setTimeout(tryScroll, 150);
-      }
-    };
-
-    // Start attempting after a short delay to allow the page to render
-    setTimeout(tryScroll, 150);
-  };
+  // ...existing code...
   const goToSection = (id: string) => {
     const maxAttempts = 20;
     let attempts = 0;
@@ -279,25 +264,19 @@ export default function ServiceDetail(): JSX.Element {
               )}
             </section>
 
-            {/* Inline CTA for large screens */}
-            <div className="mt-10 hidden sm:flex items-center gap-4">
-              <button onClick={goToConsultation} className="inline-flex items-center justify-center bg-pink-600 hover:bg-pink-700 text-white py-3 px-5 rounded-md font-medium">Book a consultation</button>
-              <button onClick={() => goToSection('services')} className="text-sm text-gray-600 inline-flex items-center gap-2">
-                <ArrowLeft size={14} />
-                <span>Back to services</span>
-              </button>
+            {/* Book Consultation CTA (from CaseStudyDetail) */}
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <div className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8 border border-pink-100">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Start Your Journey?</h3>
+                <p className="text-gray-600 mb-6">Schedule a consultation with Dr. Nasrin Hasan to discuss a personalised fertility treatment plan.</p>
+                <button onClick={() => goToSection('consultation')} className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">Book Consultation</button>
+              </div>
             </div>
           </article>
         </div>
       </main>
 
-      {/* Mobile fixed CTA */}
-      <div className="sm:hidden fixed bottom-4 left-4 right-4 z-40">
-          <div className="bg-white/95 backdrop-blur rounded-full p-2 shadow-md flex gap-3 items-center justify-center">
-          <button onClick={goToConsultation} className="flex-1 inline-flex items-center justify-center bg-pink-600 hover:bg-pink-700 text-white py-3 px-4 rounded-full font-medium">Book a consultation</button>
-          <Link to="/#services" className="inline-flex items-center justify-center text-sm text-gray-700 px-3">Services</Link>
-        </div>
-      </div>
+      {/* ...existing code... */}
     </div>
   );
 }

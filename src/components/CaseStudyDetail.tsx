@@ -97,12 +97,7 @@ export default function CaseStudyDetail() {
             <div className="flex items-center space-x-2"><Calendar size={18} /><span>{caseStudy.date}</span></div>
           </div>
 
-          <div className="bg-gradient-to-br from-pink-200 to-purple-200 rounded-2xl h-72 flex items-center justify-center mb-12">
-            <div className="text-center">
-              {getCategoryIcon(caseStudy.category)}
-              <p className="text-gray-700 font-medium mt-4">Case Study Image</p>
-            </div>
-          </div>
+          {/* Image section removed as requested */}
         </div>
       </div>
 
@@ -121,17 +116,17 @@ export default function CaseStudyDetail() {
       </Helmet>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="prose prose-lg max-w-none">
-          <p className="text-xl text-gray-600 leading-relaxed mb-8 font-medium">{caseStudy.excerpt}</p>
+  <div className="prose prose-lg max-w-none text-justify">
+          <p className="text-xl text-gray-600 leading-relaxed mb-8 font-medium text-justify">{caseStudy.excerpt}</p>
 
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-gray-700 leading-relaxed text-justify">
             {caseStudy.content.map((section, index) => (
               <div key={index}>
                 {section.type === 'heading' && (
                   <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">{section.text}</h2>
                 )}
                 {section.type === 'paragraph' && (
-                  <p className="mb-4 leading-relaxed">{section.text}</p>
+                  <p className="mb-4 leading-relaxed text-justify">{section.text}</p>
                 )}
                 {section.type === 'list' && (
                   <ul className="list-disc pl-6 space-y-2 mb-4">{section.items?.map((item, i) => <li key={i}>{item}</li>)}</ul>
