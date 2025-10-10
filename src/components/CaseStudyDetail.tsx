@@ -97,12 +97,6 @@ export default function CaseStudyDetail() {
             <div className="flex items-center space-x-2"><Calendar size={18} /><span>{caseStudy.date}</span></div>
           </div>
 
-          <div className="bg-gradient-to-br from-pink-200 to-purple-200 rounded-2xl h-72 flex items-center justify-center mb-12">
-            <div className="text-center">
-              {getCategoryIcon(caseStudy.category)}
-              <p className="text-gray-700 font-medium mt-4">Case Study Image</p>
-            </div>
-          </div>
         </div>
       </div>
 
