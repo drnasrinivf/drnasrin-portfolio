@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+// React import intentionally omitted because JSX runtime handles it (no direct React symbol usage)
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft } from 'lucide-react';
@@ -116,10 +116,6 @@ const servicesContent: Record<string, any> = {
 };
 
 export default function ServiceDetail(): JSX.Element {
-  // Always scroll to top when this page loads
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   // Navigate to home then scroll to consultation section. Uses retries because the element
@@ -214,7 +210,7 @@ export default function ServiceDetail(): JSX.Element {
 
       {/* Main content area */}
       <main className="max-w-6xl mx-auto px-4 py-12">
-  <div className="lg:flex lg:items-start lg:gap-12 pb-24">
+        <div className="lg:flex lg:items-start lg:gap-12">
           {/* Primary column */}
           <article className="lg:flex-1 max-w-6xl">
             <section className="prose prose-lg max-w-none text-justify">
@@ -295,13 +291,12 @@ export default function ServiceDetail(): JSX.Element {
         </div>
       </main>
 
-      {/* Unified CTA at bottom for all views */}
-      <div className="mt-4 flex items-center gap-4 justify-center">
-        <button onClick={goToConsultation} className="inline-flex items-center justify-center bg-pink-600 hover:bg-pink-700 text-white py-3 px-5 rounded-md font-medium">Book a consultation</button>
-        <button onClick={() => goToSection('services')} className="text-sm text-gray-600 inline-flex items-center gap-2">
-          <ArrowLeft size={14} />
-          <span>Back to services</span>
-        </button>
+      {/* Mobile fixed CTA */}
+      <div className="sm:hidden fixed bottom-4 left-4 right-4 z-40">
+          <div className="bg-white/95 backdrop-blur rounded-full p-2 shadow-md flex gap-3 items-center justify-center">
+          <button onClick={goToConsultation} className="flex-1 inline-flex items-center justify-center bg-pink-600 hover:bg-pink-700 text-white py-3 px-4 rounded-full font-medium">Book a consultation</button>
+          <Link to="/#services" className="inline-flex items-center justify-center text-sm text-gray-700 px-3">Services</Link>
+        </div>
       </div>
     </div>
   );

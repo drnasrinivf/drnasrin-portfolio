@@ -29,15 +29,16 @@ export default function Consultation() {
         </div>
 
         {/* Calendly Booking Widget */}
-        <div className="bg-white rounded-2xl shadow-2xl border border-purple-100 p-8 flex flex-col items-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center justify-center">
+        <div className="bg-white rounded-2xl shadow-2xl border border-purple-100 px-4 sm:px-8 py-6 sm:py-8 flex flex-col items-center overflow-hidden">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center justify-center text-center">
             <Calendar className="text-pink-500 mr-2" size={28} />
             Book Your Appointment Instantly
           </h3>
-          <div className="w-full" style={{ minHeight: '700px' }}>
+          {/* Constrain calendar width and ensure it's centered with padding on small screens */}
+          <div className="w-full max-w-3xl mx-auto min-h-[560px] sm:min-h-[700px] overflow-hidden">
             <InlineWidget
               url="https://calendly.com/drnasrinivf/30min"
-              styles={{ minHeight: '700px', borderRadius: '1rem', boxShadow: '0 2px 16px rgba(236, 72, 153, 0.15)' }}
+              styles={{ width: '100%', minHeight: '560px', borderRadius: '1rem', boxShadow: '0 2px 16px rgba(236, 72, 153, 0.15)' }}
               pageSettings={{
                 backgroundColor: '#fff',
                 hideEventTypeDetails: false,
