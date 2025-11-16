@@ -17,7 +17,7 @@ export default function Header({ activeSection, setActiveSection }: HeaderProps)
     { id: 'case-studies', label: 'Case Studies' },
     { id: 'testimonials', label: 'Testimonials' },
     { id: 'collaborations', label: 'Speaking' },
-    { id: 'blog', label: 'Blog' },
+    // { id: 'blog', label: 'Blog' },
     { id: 'faq', label: 'FAQ' },
     { id: 'contact', label: 'Contact' }
   ];

@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
     category: "treatments",
     readTime: "8 min read",
     date: "March 15, 2024",
-    author: "Dr. Sarah Johnson",
+    author: " Dr. Nasrin Hasan ",
     image: "ivf-guide",
     featured: true,
     content: [
@@ -100,7 +100,7 @@ export const blogPosts: BlogPost[] = [
     category: "wellness",
     readTime: "6 min read",
     date: "March 12, 2024",
-    author: "Dr. Sarah Johnson",
+    author: " Dr. Nasrin Hasan ",
     image: "nutrition",
     content: [
       {
@@ -186,7 +186,7 @@ export const blogPosts: BlogPost[] = [
     category: "fertility",
     readTime: "7 min read",
     date: "March 10, 2024",
-    author: "Dr. Sarah Johnson",
+    author: " Dr. Nasrin Hasan ",
     image: "pcos",
     content: [
       {
@@ -275,7 +275,7 @@ export const blogPosts: BlogPost[] = [
     category: "international",
     readTime: "10 min read",
     date: "March 8, 2024",
-    author: "Dr. Sarah Johnson",
+    author: " Dr. Nasrin Hasan ",
     image: "international",
     content: [
       {
@@ -361,7 +361,7 @@ export const blogPosts: BlogPost[] = [
     category: "fertility",
     readTime: "5 min read",
     date: "March 5, 2024",
-    author: "Dr. Sarah Johnson",
+    author: " Dr. Nasrin Hasan ",
     image: "male-fertility",
     content: [
       {
@@ -444,7 +444,7 @@ export const blogPosts: BlogPost[] = [
     category: "treatments",
     readTime: "9 min read",
     date: "March 2, 2024",
-    author: "Dr. Sarah Johnson",
+    author: " Dr. Nasrin Hasan ",
     image: "endometriosis",
     content: [
       {

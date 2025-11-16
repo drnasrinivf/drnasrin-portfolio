@@ -9,7 +9,7 @@ import Consultation from './components/Consultation';
 import CaseStudies from './components/CaseStudies';
 import Testimonials from './components/Testimonials';
 import Collaborations from './components/Collaborations';
-import Blog from './components/Blog';
+// Blog component is used via separate route components; not imported here to avoid unused import warning
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -75,9 +75,9 @@ function HomePage() {
         <Collaborations />
       </section> 
 
-      <section id="blog">
+      {/* <section id="blog">
         <Blog />
-      </section>
+      </section> */}
 
       <section id="faq">
         <FAQ />
@@ -103,6 +103,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/medical-disclaimer" element={<MedicalDisclaimer />} />
         <Route path="/terms-conditions" element={<TermsConditions />} />
+        
       </Routes>
     </Router>
   );

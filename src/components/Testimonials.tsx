@@ -1,11 +1,11 @@
 import React from 'react';
-import { Star, Quote, Award, Globe } from 'lucide-react';
+import { Star, Quote, Award } from 'lucide-react';
 
 export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "Patient Name",
+      name: "Patient from India",
       location: "India",
       rating: 5,
       text: "Simple lifestyle changes, consistent medical guidance, and the right fertility plan helped us achieve what we had been waiting for. We are grateful for this journey and our little miracle",
@@ -14,7 +14,7 @@ export default function Testimonials() {
     },
     {
       id: 2,
-      name: "Patient Name",
+      name: "Patient from Spain",
       location: "India",
       rating: 5,
       text: "After repeated failures and the fear of losing hope, we finally experienced the joy of parenthood with our own gametes. This journey has been nothing short of a miracle for us.",
@@ -23,7 +23,7 @@ export default function Testimonials() {
     },
     {
       id: 3,
-      name: "Patient Name",
+      name: "Patient from UAE",
       location: "India",
       rating: 5,
       text: "From being told we had no chance to holding our twins, this journey has been a life-changing miracle. With the right guidance and persistence, hope turned into reality",
@@ -32,7 +32,7 @@ export default function Testimonials() {
     },
     {
       id: 4,
-      name: "Patient Name",
+      name: "Patient from UK",
       location: "India",
       rating: 5,
       text: "After years of waiting and failed attempts at adoption, surrogacy gave us hope and joy we never imagined possible. Today, we hold our own child and our hearts are full.",
@@ -41,7 +41,7 @@ export default function Testimonials() {
     },
     {
       id: 5,
-      name: "Patient Name",
+      name: "Patient from UK",
       location: "India",
       rating: 5,
       text: "After repeated heartbreaks, we finally found the right treatment path. Today, we hold our baby boy in our arms, and it feels like a dream come true",
@@ -168,10 +168,6 @@ export default function Testimonials() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-sm text-gray-500 flex items-center">
-                      <Globe size={12} className="mr-1" />
-                      {testimonial.location}
-                    </p>
                   </div>
                 </div>
                 <div className="mt-3 space-y-1">

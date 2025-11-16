@@ -43,7 +43,7 @@ export default function Blog() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Stay informed with the latest insights, research, and practical advice on fertility, 
-            reproductive health, and wellness from Dr. Sarah Johnson and our medical team.
+            reproductive health, and wellness from  Dr. Nasrin Hasan.
           </p>
         </div>
 

@@ -139,7 +139,7 @@ export default function BlogPost() {
                 Ready to Start Your Journey?
               </h3>
               <p className="text-gray-600 mb-6">
-                Schedule a consultation with Dr. Sarah Johnson to discuss your personalized fertility treatment plan.
+                Schedule a consultation with  Dr. Nasrin Hasan  to discuss your personalized fertility treatment plan.
               </p>
               <button
                 onClick={() => {

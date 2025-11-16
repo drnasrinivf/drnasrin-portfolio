@@ -77,6 +77,17 @@ export default function Collaborations() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8 text-center">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdjoyFue4DAVwAH_wBnCxir60t_B6lAE76THv-0ddTWWq-xbg/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300"
+              >
+                Collaborate with me
+              </a>
+            </div>
           </div>
         </div>
 

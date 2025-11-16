@@ -8,7 +8,7 @@ export default function CaseStudies() {
     {
       id: 1,
       title: "Journey to Parenthood After 5 Years",
-      patientInfo: "Patient Name, India",
+      patientInfo: "Patient from India",
       challenge: "Erratic lifestyle due to frequent night shifts, rapid weight gain, irregular periods, PCOS, and reduced semen motility",
       treatment: "Lifestyle counselling, structured diet with adequate protein and fibre, supervised strength training, husband’s break from night shifts, antioxidant supplements, ovulation induction with IUI",
       outcome: "Pregnancy achieved on second IUI cycle, wife lost 7 kg, thyroid and prolactin levels normalised",
@@ -20,7 +20,7 @@ export default function CaseStudies() {
     {
       id: 2,
       title: "Journey to Parenthood Against All Odds",
-      patientInfo: "Patient Name, Spain",
+      patientInfo: "Patient from Spain",
       challenge: "Multiple failed IVF cycles with no embryo formation, advised egg donation but not acceptable due to religious beliefs",
       treatment: "Novel agents for egg quality improvement, karyotyping and genetic work-up, bone marrow harvesting, mesenchymal stem cell injection and exosome therapy via laparoscopy, individualized ovarian stimulation, embryo pooling, and PGT-A",
       outcome: "Singleton euploid embryo transfer resulted in successful pregnancy and live birth",
@@ -32,7 +32,7 @@ export default function CaseStudies() {
     {
       id: 3,
       title: "Journey to Parenthood After Azoospermia Diagnosis",
-      patientInfo: "Patient Name, UAE",
+      patientInfo: "Patient from UAE",
       challenge: "Labelled azoospermic with negligible hope for own genetic child, advised donor sperm program, tried Ayurvedic, Unani, and hormonal treatments without success",
       treatment: "Lifestyle transformation with intensive weight loss, empirical recombinant injections, IVF stimulation for wife, Micro-TESE for husband, endometrial receptivity assay, and personalised embryo transfer in natural cycle",
       outcome: "Embryos formed with husband’s own sperms, twins conceived after personalised transfer, healthy boy and girl delivered preterm, now growing into thriving toddlers",
@@ -44,7 +44,7 @@ export default function CaseStudies() {
     {
       id: 4,
       title: "Journey to Parenthood Through Surrogacy After 13 Years",
-      patientInfo: "Patient Name, UK",
+      patientInfo: "Patient from UK",
       challenge: "Married for 13 years, unable to conceive due to absent uterus, initial decision to live child-free, attempted adoption but faced long waiting lists and stringent regulations",
       treatment: "Surrogacy using couple’s own gametes (eggs and sperms), with comprehensive legal, ethical, and counselling processes in place",
       outcome: "Successful pregnancy through surrogacy, couple welcomed their own genetic child after 13 years of marriage",
@@ -56,7 +56,7 @@ export default function CaseStudies() {
     {
       id: 5,
       title: "Journey to Parenthood After 4 Pregnancy Losses",
-      patientInfo: "Patient Name, UK",
+      patientInfo: "Patient from UK",
       challenge: "Four consecutive pregnancy losses, basic investigations and genetic/immunological work-up normal, hidden cause found to be related to HLA system and immune rejection of embryos",
       treatment: "Genetic counselling, IVF with Preimplantation Genetic Testing (PGT), and Lymphocyte Immunisation Therapy (LIT)",
       outcome: "Successful pregnancy achieved, carried to term, healthy baby boy delivered",

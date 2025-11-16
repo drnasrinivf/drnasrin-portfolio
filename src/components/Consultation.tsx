@@ -35,7 +35,7 @@ export default function Consultation() {
             Book Your Appointment Instantly
           </h3>
           <InlineWidget
-            url="https://calendly.com/drnasrinivf/30min"
+            url="https://calendly.com/drnasrinivf/new-meeting"
             styles={{ width: '100%', minHeight: '420px', borderRadius: '1rem', boxShadow: '0 2px 16px rgba(236, 72, 153, 0.15)' }}
             pageSettings={{
               backgroundColor: '#fff',

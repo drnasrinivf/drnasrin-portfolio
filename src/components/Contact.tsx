@@ -1,5 +1,5 @@
-import { MapPin, Phone, Mail, Clock, Globe, Video, Calendar } from 'lucide-react';
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { MapPin, Phone, Mail, Clock, Globe, Calendar } from 'lucide-react';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 export default function Contact() {
   // contact form has been commented out — state and handlers removed
@@ -8,13 +8,13 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone Number",
-      details: ["+91 74488 22280"],
+      details: ["+91 98420 70099"],
       color: "text-purple-500"
     },
     {
       icon: Mail,
       title: "Email Address",
-      details: ["info@evafertilityclinic.com"],
+      details: [" dr.nasrinhasan.mmc@gmail.com"],
       color: "text-pink-500"
     },
     {
@@ -28,7 +28,7 @@ export default function Contact() {
     },
     {
       icon: MapPin,
-      title: "Find Our Clinic",
+      title: "Head Office",
       details: [
         "Eva IVF and Women’s Care, Plot No 10 ;",
         "23, Bazar Main Road,",
@@ -40,9 +40,9 @@ export default function Contact() {
   ];
 
   const socialLinks = [
-  { name: "Facebook", url: "#", icon: FaFacebookF, color: "text-blue-600" },
+  { name: "Facebook", url: " https://www.facebook.com/share/1ForaKpUM5/", icon: FaFacebookF, color: "text-blue-600" },
   { name: "Instagram", url: "https://www.instagram.com/dr.nasrinhasan.mmc?igsh=MWl2YXZ0MTR0M2d2eA==", icon: FaInstagram, color: "text-pink-600" },
-  { name: "Twitter", url: "#", icon: FaTwitter, color: "text-blue-400" },
+  //{ name: "Twitter", url: "#", icon: FaTwitter, color: "text-blue-400" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/dr-nasrin-hasan", icon: FaLinkedinIn, color: "text-blue-700" },
   { name: "YouTube", url: "https://youtube.com/@drnasrinhasan?si=viBLfVG8BxzADBjI", icon: FaYoutube, color: "text-red-600" }
   ];
@@ -71,6 +71,18 @@ export default function Contact() {
             Contact our international team today. We're here to answer your questions, 
             provide guidance, and support you every step of the way to parenthood.
           </p>
+          <div className="mt-6 flex justify-center">
+            <button
+              onClick={() => {
+                const el = document.getElementById('consultation');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="flex items-center space-x-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300"
+            >
+              <Calendar size={16} />
+              <span>Book Consultation</span>
+            </button>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -116,6 +128,28 @@ export default function Contact() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Branch Addresses */}
+            <div className="mt-4 bg-white rounded-xl p-6 shadow-lg border border-purple-100">
+              <h4 className="font-bold text-gray-900 mb-3">Addresses for all branches</h4>
+              <div className="text-gray-600 text-sm space-y-3">
+                
+                <div>
+                  <p className="font-semibold">Adyar</p>
+                  <p>65, 3rd Ave, Indira Nagar, Adyar, Chennai, Tamil Nadu 600020</p>
+                </div>
+
+                <div>
+                  <p className="font-semibold">Thoraipakkam</p>
+                  <p>Central Excise &amp; CC, Plot No.2, Sakthi Nagar Main St, Customs Colony, Jothi Nagar, Thoraipakkam, Tamil Nadu 600097</p>
+                </div>
+
+                <div>
+                  <p className="font-semibold">Mannadi</p>
+                  <p>43/01, P V Iyer St, Mannadi, George Town, Chennai, Tamil Nadu 600001</p>
+                </div>
+              </div>
             </div>
           </div>
           

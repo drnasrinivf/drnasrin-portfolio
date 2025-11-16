@@ -106,7 +106,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-300">
-              <p>&copy; 2024 Dr. Nasrin Hasan. All rights reserved.</p>
+              <p>&copy; 2025 Dr. Nasrin Hasan. All rights reserved.</p>
             </div>
             <div className="flex items-center space-x-4">
               <button

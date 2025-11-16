@@ -52,7 +52,7 @@ export default function Hero() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-                  10+
+                  15+
                 </div>
                 <p className="text-gray-600 text-sm">Years Experience</p>
               </div>
