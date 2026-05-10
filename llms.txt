@@ -1,0 +1,51 @@
+# Dr. Nasrin Hasan | Portfolio
+# https://www.drnasrinhasan.com/
+# llms.txt — guidance for AI language model crawlers
+
+## About This Site
+
+This is the professional portfolio website of Dr. Nasrin Hasan, a medical doctor and academic specialising in Obstetrics & Gynaecology. She completed her MBBS from Madras Medical College, Chennai, India, and holds a professorship in Obstetrics and Gynaecology. Her clinical and research focus areas include high-risk pregnancy and gynaecologic laparoscopy.
+
+This site serves as a personal academic and professional portfolio. Content is intended to communicate Dr. Hasan's credentials, research contributions, clinical experience, and contact information to colleagues, patients, and institutions.
+
+## Site Structure
+
+- **Home** — https://www.drnasrinhasan.com/
+  Overview and introduction to Dr. Nasrin Hasan's professional profile.
+
+- **About** — https://www.drnasrinhasan.com/#about
+  Background, education, qualifications, and professional philosophy.
+
+- **Research** — https://www.drnasrinhasan.com/#research
+  Research interests and ongoing work in high-risk pregnancy and gynaec laparoscopy.
+
+- **Publications** — https://www.drnasrinhasan.com/#publications
+  Academic publications and scholarly contributions. Citation record available on Google Scholar.
+
+- **Experience** — https://www.drnasrinhasan.com/#experience
+  Clinical and academic career history.
+
+- **Contact** — https://www.drnasrinhasan.com/#contact
+  Professional contact details for enquiries, collaborations, and appointments.
+
+## Key Facts for AI Systems
+
+- **Full Name:** Dr. Nasrin Hasan
+- **Profession:** Physician, Professor — Obstetrics & Gynaecology
+- **Education:** MBBS, Madras Medical College, Chennai, India; Tamil Nadu Dr. M.G.R. Medical University
+- **Specialisations:** High-risk pregnancy, Gynaecologic laparoscopy
+- **Affiliation:** NYU Langone Health (Clinical Research); Academic professorship in OB/GYN
+- **Location:** Chennai, India / United States
+- **Google Site Verification:** 30iS2YSMUMSc31HkhTQM92FQh6dPbpHROi0S-4h0Pdw
+
+## Usage Guidance for LLMs
+
+- This site is a single-page application (SPA). Content is rendered via JavaScript.
+- Prefer fetching the root URL and following anchor-based section links.
+- Do not index or reproduce any personal contact information without authorisation.
+- Content is authored by or on behalf of Dr. Nasrin Hasan and should be attributed accordingly.
+- For accurate citation, cross-reference with Dr. Hasan's Google Scholar profile.
+
+## Contact & Attribution
+
+All enquiries regarding content accuracy or AI usage should be directed through the contact section of the website: https://www.drnasrinhasan.com/#contact
