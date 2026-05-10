@@ -1,5 +1,5 @@
 import React from 'react';
-import drnasrin from '/drnasrin.jpeg';
+import drnasrin from '../../drnasrin.jpeg';
 import { Calendar, Award, Users, MapPin, Video, Clock } from 'lucide-react';
 
 export default function Hero() {
