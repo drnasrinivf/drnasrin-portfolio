@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -106,18 +106,15 @@ function HomePage() {
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/blog/:id" element={<BlogPost />} />
-        <Route path="/case-study/:id" element={<CaseStudyDetail />} />
-        <Route path="/services/:slug" element={<ServiceDetail />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/medical-disclaimer" element={<MedicalDisclaimer />} />
-        <Route path="/terms-conditions" element={<TermsConditions />} />
-        
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/blog/:id" element={<BlogPost />} />
+      <Route path="/case-study/:id" element={<CaseStudyDetail />} />
+      <Route path="/services/:slug" element={<ServiceDetail />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/medical-disclaimer" element={<MedicalDisclaimer />} />
+      <Route path="/terms-conditions" element={<TermsConditions />} />
+    </Routes>
   );
 }
 
