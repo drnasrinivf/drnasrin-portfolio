@@ -1,7 +1,11 @@
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { getSEOConfig } from '../data/seoData';
 
 export default function MedicalDisclaimer() {
   const navigate = useNavigate();
+  const seoConfig = getSEOConfig('medicalDisclaimer');
+  
   const goBack = () => {
     if (window.history.length > 1) navigate(-1);
     else navigate('/');
@@ -9,6 +13,12 @@ export default function MedicalDisclaimer() {
 
   return (
     <div className="min-h-screen bg-white py-20">
+      <Helmet>
+        <title>{seoConfig.title}</title>
+        <meta name="description" content={seoConfig.description} />
+        <link rel="canonical" href={seoConfig.canonical} />
+        <meta name="robots" content={seoConfig.robots} />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-6">
         <button
           onClick={goBack}

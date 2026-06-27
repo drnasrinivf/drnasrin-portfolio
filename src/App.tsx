@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -19,9 +20,11 @@ import ServiceDetail from './components/ServiceDetail';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import MedicalDisclaimer from './components/MedicalDisclaimer';
 import TermsConditions from './components/TermsConditions';
+import { getSEOConfig } from './data/seoData';
 
 function HomePage() {
   const [activeSection, setActiveSection] = useState('home');
+  const seoConfig = getSEOConfig('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +48,15 @@ function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>{seoConfig.title}</title>
+        <meta name="description" content={seoConfig.description} />
+        <link rel="canonical" href={seoConfig.canonical} />
+        <meta name="robots" content={seoConfig.robots} />
+        {seoConfig.ogTitle && <meta property="og:title" content={seoConfig.ogTitle} />}
+        {seoConfig.ogDescription && <meta property="og:description" content={seoConfig.ogDescription} />}
+        {seoConfig.ogType && <meta property="og:type" content={seoConfig.ogType} />}
+      </Helmet>
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
 
       <section id="home">

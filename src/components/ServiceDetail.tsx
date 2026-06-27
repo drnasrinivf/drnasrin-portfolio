@@ -2,6 +2,7 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft } from 'lucide-react';
+import { getSEOConfig } from '../data/seoData';
 
 const servicesContent: Record<string, any> = {
   infertility: {
@@ -124,6 +125,7 @@ export default function ServiceDetail(): JSX.Element {
   }, []);
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
+  const seoConfig = getSEOConfig(slug || 'home');
   // Navigate to home then scroll to consultation section. Uses retries because the element
   // may mount after navigation in the SPA.
   // ...existing code...
@@ -165,8 +167,13 @@ export default function ServiceDetail(): JSX.Element {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Helmet>
-        <title>{content.metaTitle}</title>
-        <meta name="description" content={content.metaDescription} />
+        <title>{seoConfig.title}</title>
+        <meta name="description" content={seoConfig.description} />
+        <link rel="canonical" href={seoConfig.canonical} />
+        <meta name="robots" content={seoConfig.robots} />
+        {seoConfig.ogTitle && <meta property="og:title" content={seoConfig.ogTitle} />}
+        {seoConfig.ogDescription && <meta property="og:description" content={seoConfig.ogDescription} />}
+        {seoConfig.ogType && <meta property="og:type" content={seoConfig.ogType} />}
       </Helmet>
 
       {/* Top strip / back link */}
